@@ -1,0 +1,37 @@
+.crumbles {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+.item {
+    border-radius: 50%;
+    border: 1px solid rgb(3, 110, 31);
+    color: rgb(3, 110, 31);
+    min-width: 55px;
+    min-height:55px;
+    transition: 1s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item:hover {
+    transform: scale(1.05);
+    background: rgb(3, 110, 31);
+    color: white;
+}
+
+
+.item.previos {
+    background: rgb(3, 110, 31);
+    color: white;
+}
+
+.item.active{
+    transform: scale(1.05);
+    background: rgb(3, 110, 31);
+    color: white;
+}

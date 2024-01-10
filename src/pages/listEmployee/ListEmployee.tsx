@@ -56,7 +56,7 @@ const ListEmployee = () => {
                         {list.map((el) => {
                             return (
                                
-                                    <tr onClick={()=>{
+                                    <tr key = {el.id} onClick={()=>{
                                         navigate(`${el.id}`)
                                     }}>
                                         <td>
