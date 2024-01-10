@@ -13,36 +13,20 @@ const CardTest = () => {
         }
         return arr;
     }
-    const [arr, setArr] = useState<Array<any>>([]);
-    const [currentAnswerItem , setCurrentAnswerItem]= useState<question>({ id: 0,
-        label: '',
-        gradient: 0,
-        answered: false,
-        value: undefined,})
-    const {currentAnswer, allQuestions} = crumblesStore
+    const [arr, setArr] = useState<Array<number>>([]);
     
-    useEffect(()=>{
-
-    })
-
+    
+    const {currentIdQuestion, currentItemQuestion, currentIndexQuestion,checkAnswer} = crumblesStore
 
     useEffect(() => {
-        if (currentAnswer){
-            const res = allQuestions.find((el)=>{
-                return el.id==currentAnswer
-            })
-            console.log(currentAnswer)
-            if (res){
-                setCurrentAnswerItem(res)
-                setArr(fillArray(res.gradient))
-                console.log(res)
-            }
-        }
-    }, [,currentAnswer])
+        
+            setArr(fillArray(currentItemQuestion?.gradient)) 
+        
+    }, [,currentIdQuestion,currentItemQuestion, currentIndexQuestion])
     return (
         <div style={{ display: "flex", alignItems: "center", flexDirection: "column" }}>
             <h2>
-                {currentAnswerItem.label}
+                {currentItemQuestion?.label}
             </h2>
             <div style={{ display: "flex", flexDirection: "row", gap: "10px" }}>
 
@@ -50,7 +34,9 @@ const CardTest = () => {
                 {arr.map((el) => {
 
                     return (
-                        <div className="answerBuble" key={el}> 
+                        <div className={`answerBuble ${el==currentItemQuestion?.value ? "active" : null}`} key={el} onClick={()=>{
+                            checkAnswer(currentIdQuestion,el)
+                        }}> 
                             {el}
                         </div>
 

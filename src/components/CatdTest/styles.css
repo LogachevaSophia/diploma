@@ -12,5 +12,9 @@
 }
 .answerBuble:hover{
     color:white;
-     background: rgb(3, 110, 31);
+    background: rgb(3, 110, 31);
+}
+.answerBuble.active{
+    color:white;
+    background: rgb(3, 110, 31);
 }

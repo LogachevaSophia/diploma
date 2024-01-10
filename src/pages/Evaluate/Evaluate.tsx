@@ -12,7 +12,7 @@ import {question} from "../../Store/CrumblesStore.tsx";
 const Evaluate = () => {
     const {idAnswer} = useParams();
 
-    const {allQuestions, gradient,getAllQuestions, setCurrentAnswer} = crumblesStore
+    const {allQuestions,getAllQuestions, setCurrentAnswer} = crumblesStore
 
     useEffect(()=>{
         getAllQuestions()
@@ -29,7 +29,7 @@ const Evaluate = () => {
     return (
         <>
             <Header />
-            <CrumblesTests items={allQuestions} activeNumber={idAnswer}/>
+            <CrumblesTests />
             {!idAnswer ? <button onClick={()=> navigate("1")}>
                 Начать тест
             </button> : <CardTest />} 

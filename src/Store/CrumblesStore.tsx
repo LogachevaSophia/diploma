@@ -12,7 +12,10 @@ class CrumblesStore {
 
     gradient:number = 0;
     allQuestions:Array<question> = []
-    currentAnswer: number | null= null;
+    currentIdQuestion: number | null= null; //id вопроса
+    currentItemQuestion: question;// элемент текущий
+    currentIndexQuestion: number;// индекс текущего элемента
+
 
     setGradient = (gradient: number) =>{
         this.gradient = gradient
@@ -25,7 +28,16 @@ class CrumblesStore {
     }
 
     setCurrentAnswer = (idOfAnswer: number)=>{
-        this.currentAnswer = idOfAnswer;
+        this.currentIdQuestion = idOfAnswer;
+        const index = this.allQuestions.findIndex(el=> el.id==idOfAnswer)
+        this.currentItemQuestion = this.allQuestions[index]
+        this.currentIndexQuestion = index;
+        // console.log("***")
+        // console.log(`currentIdQuestion=${this.currentIdQuestion}`)
+        // console.log(`currentItemQuestion=`)
+        // console.log(this.currentItemQuestion)
+        // console.log(`currentIndexQuestion=${this.currentIndexQuestion}`)
+        // console.log("***")
     }
 
     getAllQuestions = () => {
@@ -47,7 +59,6 @@ class CrumblesStore {
                 answered: false},
         ]
         this.setGradient(5);
-        console.log(this.allQuestions)
     }
 
 
