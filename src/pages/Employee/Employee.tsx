@@ -82,7 +82,7 @@ const Employee = () => {
                     </div>
                     {id ?  <div>
                         <button onClick={()=>{
-                            navigate(`/evaluate/${id}`)
+                            navigate(`/evaluate/${id}/1`)
                         }}>
                             <span>+</span>
                             <span>Evaluate an employee</span>

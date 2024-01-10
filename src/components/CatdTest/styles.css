@@ -7,4 +7,10 @@
     padding: 10px;
     min-height: 25px;
     min-width: 25px;
+    cursor: pointer;
+    transition:1s;
+}
+.answerBuble:hover{
+    color:white;
+     background: rgb(3, 110, 31);
 }

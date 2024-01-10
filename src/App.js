@@ -35,7 +35,8 @@ function App() {
         <Route path="/employees/:id" element={<Employee />} />
         
         <Route path="/employees" element={<ListEmployee />} />
-        <Route path="/evaluate/:id" element={<Evaluate />} />
+        <Route path="/evaluate/:idEmployee/:idTest/:idAnswer" element={<Evaluate />} />
+        <Route path="/evaluate/:idEmployee/:idTest" element={<Evaluate />} />
       </Routes>
     </Router>
     <Footer/>

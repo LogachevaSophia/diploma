@@ -26,16 +26,16 @@ table tbody tr{
     cursor: pointer;
     transition: 0.5s;
 }
-table tbody tr td:first-child{
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-table tbody tr td:last-child{
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
-
 table tbody tr:hover{
     background: rgba(23, 147, 56, 0.655);
     color: white;
 }
+table tbody tr td:first-child:hover{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+table tbody tr td:last-child:hover{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
