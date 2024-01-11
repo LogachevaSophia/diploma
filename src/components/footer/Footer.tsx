@@ -8,11 +8,11 @@ import { Link } from "react-router-dom";
 const Footer = () => {
     const icons = [
         {
-            id: "profile",
+            id: "/profile",
             component:<Profile/>
         },
         {
-            id: "home",
+            id: "/home",
             component: <Home/>
         }
        
