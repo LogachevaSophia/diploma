@@ -5,6 +5,7 @@ import CardTest from "../../components/CatdTest/CardTest.tsx";
 import { useNavigate, useParams } from "react-router-dom";
 import crumblesStore from "../../Store/CrumblesStore.tsx";
 import {question} from "../../Store/CrumblesStore.tsx";
+import styles from "./styles.module.scss";
 
 
 
@@ -29,11 +30,12 @@ const Evaluate = () => {
     return (
         <>
             <Header />
-            <CrumblesTests />
-            {!idAnswer ? <button onClick={()=> navigate("1")}>
-                Начать тест
-            </button> : <CardTest />} 
-            
+            <div className={styles.card}>
+                <CrumblesTests />
+                {!idAnswer ? <button onClick={()=> navigate("1")}>
+                    Начать тест
+                </button> : <CardTest />} 
+            </div>
             
         </>
     )

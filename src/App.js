@@ -7,6 +7,7 @@ import Profile from './pages/Employee/Employee.tsx';
 import ListEmployee from './pages/listEmployee/ListEmployee.tsx';
 import Employee from './pages/Employee/Employee.tsx';
 import Evaluate from './pages/Evaluate/Evaluate.tsx';
+import EmployeeNew from './pages/Employee/EmployeeNew.tsx';
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/profile" element={<Employee />} />
+        <Route path="/profile" element={<EmployeeNew />} />
         <Route path="/employees/:id" element={<Employee />} />
         
         <Route path="/employees" element={<ListEmployee />} />

@@ -8,7 +8,7 @@
     min-height: 25px;
     min-width: 25px;
     cursor: pointer;
-    transition:1s;
+    transition:0.5s;
 }
 .answerBuble:hover{
     color:white;

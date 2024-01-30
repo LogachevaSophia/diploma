@@ -33,6 +33,9 @@ const Carusel = ({ settings, data }: { settings: Settings, data: Array<SliderIte
               <br></br>
               <br></br>
               <br></br>
+              <br></br>
+              <br></br>
+              <br></br>
               <h3>{el.label}</h3>
             </div>
           )

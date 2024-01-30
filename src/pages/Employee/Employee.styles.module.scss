@@ -1,0 +1,72 @@
+.employee{
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #6978FF;
+    margin-top: -20px;
+    // min-height:350px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+    .table{
+        width: 50%;
+        display: table;
+        table-layout: fixed;
+        img{
+            border-radius: 50%;
+            width:140px;
+            // display: inline-block;
+        }
+        .tableCell{
+            display: table-cell;
+            vertical-align: top;
+            padding: 15px;
+            // border: 1px solid #ccc;
+        }
+        .tableCell:nth-child(1){
+            // width:87%
+        }
+
+        .tableCell:nth-child(2){
+            position: relative;
+            // width:65%;
+            div{
+                position: absolute;               
+                top: 50%;                         
+                transform: translate(0, -50%) }   
+            }
+        }
+    .place *{ 
+        margin-left:20px;
+    } 
+    .evaluate button{
+        float:right;
+        border: none;
+        background: white;
+        color:#4A5DFF;
+        padding: 10px;
+        border-radius: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        transition:0.3s ;
+    }
+    .evaluate button:hover{
+        transform: scale(1.1);
+    }
+}
+
+.achivments{
+    background-color: #4A5DFF;
+    min-height: 70px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top:-20px;
+    padding: 0 10%
+}
+
+@media (max-width: 746px) { 
+    .employee{
+        .table{
+            width:100%
+        }
+    }
+}

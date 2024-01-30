@@ -32,29 +32,23 @@ class CrumblesStore {
         const index = this.allQuestions.findIndex(el=> el.id==idOfAnswer)
         this.currentItemQuestion = this.allQuestions[index]
         this.currentIndexQuestion = index;
-        // console.log("***")
-        // console.log(`currentIdQuestion=${this.currentIdQuestion}`)
-        // console.log(`currentItemQuestion=`)
-        // console.log(this.currentItemQuestion)
-        // console.log(`currentIndexQuestion=${this.currentIndexQuestion}`)
-        // console.log("***")
     }
 
     getAllQuestions = () => {
         this.allQuestions = [
             {
                 id:1,
-                label:"как вы отночитесь к шаурме",
+                label:"как вы относитесь к шаурме",
                 gradient:5,
                 answered: false},
             {
                 id:2,
-                label:"как вы отночитесь к шаурме2",
+                label:"как вы относитесь к шаурме2",
                 gradient:5,
                 answered: false},
             {
                 id:3,
-                label:"как вы отночитесь к шаурме3",
+                label:"как вы относитесь к шаурме3",
                 gradient:5,
                 answered: false},
         ]
