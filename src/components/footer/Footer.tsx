@@ -9,25 +9,28 @@ const Footer = () => {
     const icons = [
         {
             id: "/profile",
-            component:<Profile/>
+            component: <Profile />
         },
         {
             id: "/home",
-            component: <Home/>
+            component: <Home />
         }
-       
+
     ]
-    return(
-        <div className="footer">
-            {icons.map((el)=>{
-                return(
+    return (
+
+        <>{false && <div className="footer">
+            {icons.map((el) => {
+                return (
                     <a href={el.id} key={el.id}>
                         {el.component}
                     </a>
-                   
+
                 )
             })}
-        </div>
+        </div>}
+        </>
+
     )
 
 }

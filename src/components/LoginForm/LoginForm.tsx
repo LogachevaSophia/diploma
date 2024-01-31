@@ -3,13 +3,15 @@ import styles from "./styles.module.scss"
 
 import avatar from "../../icons/avatar.jpg";
 import { FormField } from "../FormField/FormField.tsx"
+import image from "../../icons/formloginImage.jpg"
+import IButton from "../IButton/IButton.tsx";
 
 const LoginForm = () => {
 
     return (
-        <>
-            <div className={styles.formLogin}>
-                <img src={avatar}>
+        <div className={styles.container}>
+            <div className={styles.image}>
+                <img src={image}>
                 </img>
             </div>
             <form className={styles.formLogin}>
@@ -26,25 +28,44 @@ const LoginForm = () => {
                     autocomplete="on"
                     isRequired
                 />
-                {/* <span>
-                    <div>
-                        <input
-                            name="userName"
-                            className={styles.input}
-                            type="text"
-                            tabindex="0"
-                            autocomplete="on"
-                            data-link=""
-                            title="" />
-                    </div>
-                    <div className={styles.secondBlock}>
-                        <div className={styles.span}>
-                            Логин
-                        </div>
-                    </div>
-                </span> */}
+                <FormField
+                    label="Пароль"
+                    name="userName"
+                    // register={register}
+                    type="text"
+                    // error={errorMessage(errors?.userName?.message, "userName")}
+                    // isFocused={isFocused.userName}
+                    // onFocus={handleFocus}
+                    // onBlur={handleBlur}
+                    // currentValue={watchAllField.userName}
+                    autocomplete="on"
+                    isRequired
+                />
+                <IButton
+                    form="submit"
+                   
+                    type="button"
+                // disabled={authFormsIsLoading.value}
+                >
+                    Войти
+                </IButton>
+                <div className={styles.createAccount}>
+                    <hr className={styles.hr1}  />
+                    <p> Не зарегистрирован? </p>
+                    <hr className={styles.hr1} />
+                </div>
+                <IButton
+                    form="submit"
+                    type="submit"
+                    variant="outlined" 
+                    
+                // disabled={authFormsIsLoading.value}
+                >
+                    Создать аккаунт
+                </IButton>
+
             </form >
-        </>
+        </div>
     )
 
 
