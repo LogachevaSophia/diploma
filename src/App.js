@@ -8,6 +8,7 @@ import ListEmployee from './pages/listEmployee/ListEmployee.tsx';
 import Employee from './pages/Employee/Employee.tsx';
 import Evaluate from './pages/Evaluate/Evaluate.tsx';
 import EmployeeNew from './pages/Employee/EmployeeNew.tsx';
+import LoginForm from './components/LoginForm/LoginForm.tsx';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
      <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<LoginForm />} />
         <Route path="/home" element={<Home />} />
         <Route path="/profile" element={<EmployeeNew />} />
         <Route path="/employees/:id" element={<Employee />} />

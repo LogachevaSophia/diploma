@@ -1,0 +1,91 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+@import "../../assets/scss/inputMixins";
+
+.fieldWrapper {
+  @include inputWrapper;
+  display: block !important;
+
+  .label {
+    @include inputLabel;
+
+    &__content {
+      position: relative;
+
+      display: inline-block;
+      max-width: 100%;
+      padding-right: 7px;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .required {
+      position: absolute;
+      top: -1px;
+      right: 0;
+
+      color: $required-color;
+    }
+  }
+
+  &.active {
+    .label {
+      @include activeInputLabel;
+    }
+  }
+
+  &.error {
+    .label {
+      @include activeInputLabel;
+      color: $error-color;
+      max-width: 110%;
+    }
+
+    .errorMessage {
+      @include errorMessage;
+    }
+  }
+
+  &.disabled {
+    // pointer-events: none;
+    cursor: default;
+
+    .label {
+      color: $label-disabled-color !important;
+    }
+  }
+
+  :global {
+    input:-webkit-autofill {
+      -webkit-background-clip: text;
+
+      & ~ .label {
+        @include activeInputLabel;
+      }
+    }
+  }
+}
+
+fieldset[disabled] {
+  .fieldWrapper {
+    .label {
+      color: $label-disabled-color;
+    }
+  }
+}
+
+.info {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 12px;
+  font-size: 10px;
+  height: 12px;
+  cursor: pointer;
+  svg {
+    width: 12px;
+    height: 12px;
+  }
+}

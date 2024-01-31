@@ -1,0 +1,72 @@
+@import "./variables";
+
+//Button
+
+@mixin buttonBoxShadow($param) {
+  -webkit-box-shadow: $param;
+  -moz-box-shadow: $param;
+  box-shadow: $param;
+}
+
+@mixin buttonSize($font-size, $padding-tb, $padding-lr, $gap) {
+  font-size: $font-size;
+  padding: $padding-tb $padding-lr;
+  gap: $gap;
+}
+
+@mixin buttonIconSize($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin buttonIconColor($param) {
+  path {
+    fill: $param;
+    color: $param;
+    transition: all 0.2s ease;
+  }
+}
+
+// text
+@mixin labelText {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $label-color;
+}
+
+@mixin inputText {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $input-color;
+}
+
+@mixin valueText {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $value-color;
+}
+
+@mixin svgIconColor {
+  svg {
+    path {
+      fill: rgba(109, 137, 145, 1);
+    }
+  }
+  &:disabled {
+    svg {
+      path {
+        fill: rgba(109, 137, 145, 0.5);
+      }
+    }
+  }
+  &:hover {
+    svg {
+      path {
+        fill: rgba(109, 137, 145, 1);
+      }
+    }
+  }
+}

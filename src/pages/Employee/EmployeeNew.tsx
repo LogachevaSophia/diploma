@@ -63,14 +63,14 @@ const EmployeeNew = () => {
                     <span>Санкт-Петербург</span>
                 </div>
                 <br/>
-                 <div className={styles.evaluate}>
+                 {id && <div className={styles.evaluate}>
                         <button onClick={()=>{
                             navigate(`/evaluate/${id}/1`)
                         }}>
                             <span>+</span>
                             <span>Evaluate an employee</span>
                         </button>
-                    </div> 
+                    </div> }
             </div>
             <div className={styles.achivments}>
                 <Slider settings={settings} data={data}/>
